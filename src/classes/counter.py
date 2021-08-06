@@ -1,3 +1,5 @@
+from math import ceil
+
 from src.classes.item import Item
 
 
@@ -8,3 +10,7 @@ class Counter(dict):
             self[key]: int = 0
 
         return super(Counter, self).__getitem__(key)
+
+    def round_up(self):
+        super(Counter, self).__init__({x: ceil(y) for (x, y) in self.items()})
+        return self

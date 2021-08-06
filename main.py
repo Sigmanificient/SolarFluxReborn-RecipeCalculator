@@ -1,4 +1,4 @@
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Counter
 
 from src import cli, solar_panels
 from src.classes.item import Item
@@ -21,7 +21,7 @@ def main() -> None:
             solar_panels[int(tier) - 1].get_raw_recipe() * int_amount
         )
 
-        count: Dict[Item, int] = recursive_list_count(to_craft)
+        count: Counter = recursive_list_count(to_craft).round_up()
 
         cli.pretty_list(
             "Total ressources needed",

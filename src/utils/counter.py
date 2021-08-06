@@ -15,6 +15,6 @@ def recursive_list_count(collection: List[Any], count_result=None) -> Counter:
             recursive_list_count(item, count_result)
 
         else:
-            count_result[item] += 1
+            count_result[item] += item.per_craft
 
     return count_result
