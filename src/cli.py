@@ -22,3 +22,10 @@ def ask(question):
             'message': question,
         }
     ).get("replied")
+
+
+def pretty_list(collection_name, collection):
+    print('-' * 20)
+    print(collection_name)
+    print('\n'.join(f'- {item}' for item in collection))
+    print('-' * 20)

@@ -17,9 +17,10 @@ def main():
         to_craft = solar_panels[int(tier) - 1].get_raw_recipe() * amount
         count = recursive_list_count(to_craft)
 
-        print("Total ressources needed: ")
-        print('\n'.join(f"- {k} x{v}" for k, v in sorted(count.items())))
-        print()
+        cli.pretty_list(
+            "Total ressources needed",
+            (f"{k} x{v:,}" for k, v in sorted(count.items()))
+        )
 
         action = cli.choose_from('action', 'get materials', 'quit')
 
