@@ -1,3 +1,5 @@
+# -*- charset=utf-8 -*-
+
 from typing import Optional, List, Dict, Counter
 
 from src import cli, solar_panels
@@ -10,6 +12,9 @@ def main() -> None:
 
     while action != 'quit':
         tier: str = cli.choose_from('tier', *map(str, range(1, 7)))
+
+        if tier is None:
+            continue
 
         amount: str = ''
         while not amount.isdigit():
