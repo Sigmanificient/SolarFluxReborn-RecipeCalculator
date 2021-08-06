@@ -1,5 +1,3 @@
-# -*- charset=utf-8 -*-
-
 from typing import Optional, List, Dict, Counter
 
 from src import cli, solar_panels
