@@ -92,3 +92,12 @@ solar_panel_6 = Item(
         + solar_panel_5 * 2 + photovoltaic_cell_4 * 3
     )
 )
+
+solar_panels = [
+    solar_panel_1,
+    solar_panel_2,
+    solar_panel_3,
+    solar_panel_4,
+    solar_panel_5,
+    solar_panel_6
+]
