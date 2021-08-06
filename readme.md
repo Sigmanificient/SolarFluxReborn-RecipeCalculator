@@ -2,4 +2,4 @@
 
 A simple python app to calculate minecraft solar flux reborn recipe cost in base vanilla materials.
 
-![usage](doc/usage.gif)
+<img src="doc/usage.gif" alt="usage" height="120px" width="auto">
