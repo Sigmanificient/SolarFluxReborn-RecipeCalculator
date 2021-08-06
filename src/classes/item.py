@@ -12,14 +12,14 @@ class Item:
     recipe: Optional[List[Union[Item, Block]]] = None
     per_craft: int = 1
 
-    def __mul__(self, other):
+    def __mul__(self, other: int) -> List[Item]:
         if other > 1:
             return [self] * other
 
         if not self.is_base:
             return [x for item in self.recipe for x in (item * other)]
 
-        self.val = other
+        self.per_craft: int = other
         return [self]
 
     def __iter__(self):

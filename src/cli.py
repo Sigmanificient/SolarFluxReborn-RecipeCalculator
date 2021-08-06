@@ -1,7 +1,9 @@
+from typing import Iterable
+
 from PyInquirer import prompt
 
 
-def choose_from(question, *choices):
+def choose_from(question: str, *choices) -> str:
     """Let the user choose between a list of options."""
     return prompt(
         {
@@ -13,7 +15,7 @@ def choose_from(question, *choices):
     ).get("command")
 
 
-def ask(question):
+def ask(question: str) -> str:
     """Let the user enter a custom value."""
     return prompt(
         {
@@ -24,7 +26,7 @@ def ask(question):
     ).get("replied")
 
 
-def pretty_list(collection_name, collection):
+def pretty_list(collection_name: str, collection: Iterable[str]) -> None:
     print('-' * 20)
     print(collection_name)
     print('\n'.join(f'- {item}' for item in collection))

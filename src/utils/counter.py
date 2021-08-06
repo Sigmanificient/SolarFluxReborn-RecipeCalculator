@@ -1,9 +1,11 @@
+from typing import List, Any
+
 from src.classes.counter import Counter
 
 
-def recursive_list_count(collection, count_result=None):
+def recursive_list_count(collection: List[Any], count_result=None) -> Counter:
     if count_result is None:
-        count_result = Counter()
+        count_result: Counter = Counter()
 
     if not len(collection):
         return Counter()
