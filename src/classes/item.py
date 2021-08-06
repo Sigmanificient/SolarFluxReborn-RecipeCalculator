@@ -31,6 +31,21 @@ class Item:
     def __radd__(self, other):
         return [self] + list(other)
 
+    def __hash__(self):
+        return hash(self.name)
+
     @property
     def is_base(self):
         return self.recipe is None
+
+    def get_raw_recipe(self):
+        if self.recipe is None:
+            return self
+
+        return [item.get_raw_recipe() for item in self.recipe]
+
+    def __repr__(self):
+        return self.name
+
+    def __lt__(self, other):
+        return self.name < other.name

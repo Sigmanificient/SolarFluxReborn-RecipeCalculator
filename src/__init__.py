@@ -3,19 +3,19 @@ from src.classes.block import Block
 
 # Base materials
 
-iron_ingot = Item('iron ingot')
-glass = Item('glass')
-wooden_planks = Item('wooden_planks')
-cobblestone = Item('cobblestone')
-redstone = Item('redstone')
-lapis = Item('lapis')
-stick = Item('stick')
-gold = Item('gold')
-clay = Item('clay')
-glowstone_dust = Item('glowstone dust')
-obsidian = Item('obsidian')
-diamond = Item('diamond')
-blaze_powder = Item('Blaze powder')
+iron_ingot = Item('Iron Ingot')
+glass = Item('Glass')
+wooden_planks = Item('Wooden Planks')
+cobblestone = Item('Cobblestone')
+redstone = Item('Redstone')
+lapis = Item('Lapis')
+stick = Item('Stick')
+gold = Item('Gold')
+clay = Item('Clay')
+glowstone_dust = Item('Glowstone Dust')
+obsidian = Item('Obsidian')
+diamond = Item('Diamond')
+blaze_powder = Item('Blaze Powder')
 quartz = Item('Quartz')
 
 # Block
@@ -26,11 +26,11 @@ quartz_block = Block('Quartz block', quartz, amount=4)
 
 # Solar panels components
 redstone_torch = Item('Redstone torch', redstone + stick)
-mirror = Item('mirror', iron_ingot + glass * 3)
-piston = Item('piston', redstone + wooden_planks * 3 + cobblestone * 4)
-repeater = Item('repeater', redstone + cobblestone * 3 + redstone_torch * 2)
-clock = Item('clock', redstone + gold * 4)
-redstone_lamp = Item('redstone lamp', glowstone_dust + redstone * 4)
+mirror = Item('Mirror', iron_ingot + glass * 3)
+piston = Item('Piston', redstone + wooden_planks * 3 + cobblestone * 4)
+repeater = Item('Repeater', redstone + cobblestone * 3 + redstone_torch * 2)
+clock = Item('Clock', redstone + gold * 4)
+redstone_lamp = Item('Redstone Lamp', glowstone_dust + redstone * 4)
 
 # Photovoltaic cells
 photovoltaic_cell_1 = Item(
@@ -51,8 +51,8 @@ photovoltaic_cell_3 = Item(
 photovoltaic_cell_4 = Item(
     'Photovoltaic cell IV',
     (
-            photovoltaic_cell_3 + diamond + glowstone_dust * 2
-            + blaze_powder * 3 + quartz_block * 2
+        photovoltaic_cell_3 + diamond + glowstone_dust * 2
+        + blaze_powder * 3 + quartz_block * 2
     )
 )
 
